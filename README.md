@@ -22,32 +22,32 @@ pip install -r requirements.txt
 
 ```bash
 # Get latest 10 papers from a researcher
-python scholar_profile_parser.py "Stephen Hawking"
+python3 parser.py "Stephen Hawking"
 
 # Get papers from 2020 onwards with faster processing
-python scholar_profile_parser.py "Stephen Hawking" --year-limit 2020 --num-workers 8
+python3 parser.py "Stephen Hawking" --year-limit 2020 --num-workers 8
 
 # Save results to JSON for AI analysis
-python scholar_profile_parser.py "Stephen Hawking" --output hawking_papers.json
+python3 parser.py "Stephen Hawking" --output hawking_papers.json
 ```
 
 ## Usage Examples
 
 ```bash
 # Basic usage - get 20 most recent papers
-python scholar_profile_parser.py "Stephen Hawking"
+python3 parser.py "Stephen Hawking"
 
 # Limit to recent work (2022 and newer)
-python scholar_profile_parser.py "Stephen Hawking" --year-limit 2022
+python3 parser.py "Stephen Hawking" --year-limit 2022
 
 # Get more papers with parallel processing
-python scholar_profile_parser.py "Stephen Hawking" --max-papers 50 --num-workers 8
+python3 parser.py "Stephen Hawking" --max-papers 50 --num-workers 8
 
 # Combine max papers and year limit for focused research
-python scholar_profile_parser.py "Stephen Hawking" --max-papers 30 --year-limit 2015
+python3 parser.py "Stephen Hawking" --max-papers 30 --year-limit 2015
 
 # Save to file for AI chat
-python scholar_profile_parser.py "Stephen Hawking" --output hawking_papers.json --year-limit 2020
+python3 parser.py "Stephen Hawking" --output hawking_papers.json --year-limit 2020
 ```
 
 ## Parameter Strategy & Tips
@@ -78,7 +78,7 @@ python scholar_profile_parser.py "Stephen Hawking" --output hawking_papers.json 
 
 ## AI Integration Workflow
 
-1. **Extract papers**: `python scholar_profile_parser.py "Stephen Hawking" --output hawking_data.json`
+1. **Extract papers**: `python3 parser.py "Stephen Hawking" --output hawking_data.json`
 2. **Copy the JSON output** or key abstracts
 3. **Chat with AI**: Paste into ChatGPT/Claude/Gemini with prompts like:
    - "Analyze this researcher's work focus and methodology"
